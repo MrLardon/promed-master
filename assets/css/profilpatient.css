@@ -1,0 +1,56 @@
+<#clever{
+    background: rgba(63, 241, 212, 0.363)
+}
+#fond{
+    background-color: #ffffff;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: rgb(174, 207, 212);
+}
+table{
+    border-collapse: collapse;
+    width: 400px;
+  }
+  th,tr,td{
+    border: 1px solid black;
+    padding: 10px;
+    vertical-align: top;
+  }
+  
+
+.profile-button {
+    background: rgb(192, 212, 216);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #b49fb8;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: rgb(145, 18, 18);
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
