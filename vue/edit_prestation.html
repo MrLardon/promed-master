@@ -1,0 +1,38 @@
+<?php
+
+$titre = "Nouveau patient";
+//include "entete.html";
+//include "pied.html";
+//include "../controleur/patient/edit_patient.php";
+?>
+<!DOCTYPE html>
+
+<head>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <!-- <form action="../controleur/praticien/edit_prestation.php" method="post"> -->
+    <form action="index.php?action=newpresta" method="post">
+        <div>
+            <h2>Nouvelle prestation : </h2>
+        </div>
+        <div style="display: flex ; flex-direction: column" class="form-control">
+            <div class="form-control">
+                <input type="text" name='acte' placeholder="Acte" required/>
+            </div>
+            <div class="form-control">
+                <input type="text" name="duree" placeholder="Durée" required/>
+            </div>
+            <div class="form-control">
+                <input type="text" name="tarif" placeholder="tarif" required/>
+            </div>
+            <div>
+                <button type="submit" name="submit"> Valider</button>
+            </div>
+        </div class="form-control">
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+-------------
+CONFIG DB NAS
+-------------
+
+server : 172.16.120.2
+
+user : dev
+
+password : SuperUser@sio56
+
+port : 3307
+
+----------------
+
+PhpMyAdmin
+http://172.16.120.2/phpMyAdmin
+

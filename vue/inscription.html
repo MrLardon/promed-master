@@ -1,0 +1,73 @@
+<?php
+$titre = "Nouveau patient";
+?>
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<title>Inscription à Promed</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!--Une bibliothèque -->
+		<link rel="stylesheet" href="assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper" style="background-image: url('/assets/img/bg-registration-form-1.jpg');">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="assets/img/registration-form-1.jpg" alt="">
+				</div>
+				<form action="" method="post">
+					<h3><?= $titre ?></h3>
+					<div class="form-group">
+						<input type="text" placeholder="Prénom" class="form-control" name="nom" required>
+						<input type="text" placeholder="Nom" class="form-control" name="prenom" required>
+					</div>
+					<input type="hidden" name="rue" value="huifze">
+					<input type="hidden" name="num_rue" value="4">
+					<input type="hidden" name="telephone" value="02020202">
+					<input type="hidden" name="code_postal" value="56000">
+					<input type="hidden" name="ville" value="vannes">
+					<input type="hidden" name="nvx_client" value="1">
+					<div class="form-wrapper">
+						<input type="date" placeholder="Date de naissance" name="date_naissance">
+					</div>
+					<div class="form-wrapper">
+						<input type="text" placeholder="Numéro de carte vitale" class="form-control" name="num_secu" required>
+						<i class="zmdi zmdi-account"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="text" placeholder="Email" class="form-control" name="mail" required>
+						<i class="zmdi zmdi-email"></i>
+					</div>
+					<div class="form-wrapper">
+						<select name="" id="" class="form-control" name="">
+							<option value="" disabled selected>Usage</option>
+							<option value="madame">Madame</option>
+							<option value="monsieur">Monsieur</option>
+						</select>
+						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="password" placeholder="Mot de passe" class="form-control" >
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="password" placeholder="Confirmation du mot de passe" class="form-control"name="password">
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<button type="submit">S'inscrire
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>
