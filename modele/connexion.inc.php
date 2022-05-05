@@ -23,6 +23,7 @@ function logout() {
     }
     unset($_SESSION["mail"]);
     unset($_SESSION["password"]);
+    //test
 }
 
 function getMailULoggedOn(){
