@@ -1,6 +1,7 @@
 <?php
 include_once "bd.inc.php";
 include VUE_DIR."edit_praticien.html";
+
 $sets =[
     $_POST["nom"],
     $_POST["prenom"],
@@ -23,4 +24,5 @@ if (isset($_POST)) {
     foreach ($query as $row) {
         print_r($row);
     }
+
 }

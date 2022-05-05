@@ -4,7 +4,7 @@ include MODELE_DIR.'edit_praticien.inc.php';
 
 
     if (!empty($_POST)) {
-        echo 'Compte praticien crée ';
+        echo 'Compte praticien crée avec succès';
     }
 
     if (!empty($_GET['action'])){
