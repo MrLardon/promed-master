@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
 $titre = "Nouveau patient";
-?>
+?> -->
 <!DOCTYPE html>
 <html>
 	
@@ -10,21 +10,21 @@ $titre = "Nouveau patient";
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<!--Une bibliothèque -->
-		<link rel="stylesheet" href="assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		<link rel="stylesheet" href="../assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 
 		<!-- CSS -->
-		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="../assets/css/style.css">
 	</head>
 
 	<body>
 
-		<div class="wrapper" style="background-image: url('/assets/img/bg-registration-form-1.jpg');">
+		<div class="wrapper" style="background-image: url('../assets/img/hopitalfond.jpg');">
 			<div class="inner">
 				<div class="image-holder">
-					<img src="assets/img/registration-form-1.jpg" alt="">
+					<img src="../assets/img/registration-form-1.jpg" alt="" id="harold">
 				</div>
 				<form action="" method="post">
-					<h3><?= $titre ?></h3>
+					<!-- <h3><?= $titre ?></h3> -->
 					<div class="form-group">
 						<input type="text" placeholder="Prénom" class="form-control" name="nom" required>
 						<input type="text" placeholder="Nom" class="form-control" name="prenom" required>
@@ -42,8 +42,10 @@ $titre = "Nouveau patient";
 					<div class="form-wrapper">
 						<input type="text" placeholder="Email" class="form-control" name="mail" required>
 						<i class="zmdi zmdi-email"></i>
+						
 					</div>
-					<div class="form-wrapper">
+					
+					<div class="form-wrapper"><i class="zmdi zmdi-male-female"></i>
 						<select name="" id="" class="form-control" name="">
 							<option value="" disabled selected>Usage</option>
 							<option value="madame">Madame</option>
@@ -53,23 +55,23 @@ $titre = "Nouveau patient";
 					</div>
 					<div class="form-wrapper">
 						<input type="text" placeholder="Rue" class="form-control" name="rue" >
-						<i class="zmdi zmdi-lock"></i>
+						<i class="zmdi zmdi-home"></i>
 					</div>
 					<div class="form-wrapper">
 						<input type="int" placeholder="Numéro de la rue" class="form-control" name="num_rue" >
-						<i class="zmdi zmdi-lock"></i>
+						<i class="zmdi zmdi-collection-item-1"></i>
 					</div>
 					<div class="form-wrapper">
 						<input type="int" placeholder="Code postal" class="form-control" name="code_postal" >
-						<i class="zmdi zmdi-lock"></i>
+						<i class="zmdi zmdi-pin"></i>
 					</div>
 					<div class="form-wrapper">
 						<input type="int" placeholder="Ville" class="form-control" name="ville" >
-						<i class="zmdi zmdi-lock"></i>
+						<i class="zmdi zmdi-city"></i>
 					</div>
 					<div class="form-wrapper">
 						<input type="int" placeholder="Telephone" class="form-control" name="telephone" >
-						<i class="zmdi zmdi-lock"></i>
+						<i class="zmdi zmdi-phone"></i>
 					</div>
 					<div class="form-wrapper">
 						<input type="password" placeholder="Mot de passe" class="form-control" >
