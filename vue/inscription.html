@@ -29,13 +29,10 @@ $titre = "Nouveau patient";
 						<input type="text" placeholder="Prénom" class="form-control" name="nom" required>
 						<input type="text" placeholder="Nom" class="form-control" name="prenom" required>
 					</div>
-					<input type="hidden" name="rue" value="huifze">
-					<input type="hidden" name="num_rue" value="4">
+
 					<input type="hidden" name="telephone" value="02020202">
-					<input type="hidden" name="code_postal" value="56000">
-					<input type="hidden" name="ville" value="vannes">
 					<input type="hidden" name="nvx_client" value="1">
-					<div class="form-wrapper">
+					<div class="form-wrapper">Date de naissance
 						<input type="date" placeholder="Date de naissance" name="date_naissance">
 					</div>
 					<div class="form-wrapper">
@@ -53,6 +50,26 @@ $titre = "Nouveau patient";
 							<option value="monsieur">Monsieur</option>
 						</select>
 						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="text" placeholder="Rue" class="form-control" name="rue" >
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="int" placeholder="Numéro de la rue" class="form-control" name="num_rue" >
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="int" placeholder="Code postal" class="form-control" name="code_postal" >
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="int" placeholder="Ville" class="form-control" name="ville" >
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="int" placeholder="Telephone" class="form-control" name="telephone" >
+						<i class="zmdi zmdi-lock"></i>
 					</div>
 					<div class="form-wrapper">
 						<input type="password" placeholder="Mot de passe" class="form-control" >
