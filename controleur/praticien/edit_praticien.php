@@ -1,16 +1,14 @@
 <?php
-include MODELE_DIR.'edit_praticien.inc.php';
+include MODELE_DIR."edit_praticien.inc.php";
 
 
 
     if (!empty($_POST)) {
         echo 'Compte praticien crée avec succès';
+        header('Location: ?action=connexion');
+        exit;
+    }else{
+        echo "Un problème est survenu lors de l'inscription";
+
     }
 
-    if (!empty($_GET['action'])){
-        header('Location: index.php?action=connexion');
-        exit;
-    } else {
-        header('Location: index.php?action=defaut');
-        exit;
-    }

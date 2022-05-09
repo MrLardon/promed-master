@@ -1,6 +1,6 @@
 <?php
 include_once "bd.inc.php";
-include VUE_DIR."edit_praticien.html";
+include VUE_DIR."nouveauPraticien.html";
 
 $sets =[
     $_POST["nom"],
@@ -21,8 +21,8 @@ if (isset($_POST)) {
 
     $query = getPdo()->prepare("INSERT INTO praticien (nom, prenom, rue, mail, specialite, num_tel, num_rpps, num_rue, code_postal, ville, tele_consult, password)  VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
     $query->execute($sets);
-    foreach ($query as $row) {
-        print_r($row);
-    }
+  //  foreach ($query as $row) {
+  //      print_r($row);
+  //  }
 
 }
