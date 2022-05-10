@@ -6,7 +6,7 @@ $titre = "Connexion";
 	
 	<head>
 		<meta charset="utf-8">
-		<title><?= $titre ?> à Promed</title>
+		<title><php?= $titre ?> à Promed</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<!--Une bibliothèque -->
@@ -24,29 +24,29 @@ $titre = "Connexion";
 					<img src="assets/img/docteur.jpg" alt="">
 				</div>
 				<form action="" method="post">
-					<h3> <?= $titre ?> </h3>
+					<h3> <php?= $titre ?> </h3>
 		
-
 					<div class="form-wrapper">
-						<input type="text" placeholder="Email" class="form-control">
+						<input name ="mail" type="text" placeholder="Email" class="form-control">
 						<i class="zmdi zmdi-email"></i>
 					</div>
 
 					<div class="form-wrapper">
-						<input type="password" placeholder="Mot de passe" class="form-control">
+						<input name="password" type="password" placeholder="Mot de passe" class="form-control">
 						<i class="zmdi zmdi-lock"></i>
 					</div>
 				
 					<button>Se connecter
 						<i class="zmdi zmdi-arrow-right"></i>
 					</button>
-					<button>S'inscrire
-						<i class="zmdi zmdi-arrow-right"></i>
 
+				</form>
+				<br>
+				<form method="get" action="controleur/inscription.php">
+					<button type="submit">S'inscrire
+						<i class="zmdi zmdi-arrow-right"></i>
 					</button>
 				</form>
-				
-		
 			</div>
 		</div>
 		
