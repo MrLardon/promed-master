@@ -1,3 +1,2 @@
 <?php
-header('Location: http://projet.promed/?action=compte');
-?>
+header('Location: ../../?action=inscription');
