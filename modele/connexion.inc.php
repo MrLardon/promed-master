@@ -5,6 +5,7 @@ include VUE_DIR."connexion.html";
 
 $mailU = $_POST["mail"];
 $mdpU = $_POST["password"];
+print_r($mailU);
 
 //print_r($mdpU);
 

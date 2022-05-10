@@ -2,6 +2,8 @@
 
 function controleurPrincipal($action)
 {
+    //die (CONTROL_PRATICIEN."rdv_praticien.php");
+    
     $lesActions = array();
     $lesActions["defaut"] = CONTROL_DIR."connexion.php";
     $lesActions["connexion"] = CONTROL_DIR."connexion.php";
@@ -12,6 +14,7 @@ function controleurPrincipal($action)
     $lesActions["planningpro"] = CONTROL_PRATICIEN."planning.php";
     $lesActions["compte"] = CONTROL_PATIENT."monProfilPatient.php";
     $lesActions["inscriptionPro"] =CONTROL_PRATICIEN."edit_praticien.php";
+    $lesActions["rdvpraticien"] =CONTROL_PRATICIEN."rdv_praticien.php";
 
 
 
