@@ -18,7 +18,7 @@ $profil = $query->Fetch(PDO::FETCH_OBJ);
 
 
 
-$queryrdv = getPdo()->prepare("SELECT s.metier,pr.nom, date, conclusion,plages FROM rdv r INNER JOIN Plage p ON r.plage = p.id inner join praticien pr on pr.id=r.id_praticien INNER JOIN specialite s ON s.id=pr.id_specialite");
+$queryrdv = getPdo()->prepare("SELECT pa.nom, pa.prenom, pa.telephone, date, plages FROM rdv r INNER JOIN Plage p ON r.plage = p.id INNER JOIN praticien pr on pr.id=r.id_praticien INNER JOIN patient pa on pa.id=r.id_patient WHERE pr.id = 2 ");
 $queryrdv->execute();
 
 $rdvtab=null;
@@ -26,11 +26,10 @@ $rdvtab=null;
 while($rdv = $queryrdv->Fetch(PDO::FETCH_OBJ)){
 
     $rdvtab.='<tbody><tr>';
-    $rdvtab.='<td>'.  $rdv->metier.'</td>';
-    $rdvtab.='<td>'.  $rdv->nom.'</td>';
-    $rdvtab.='<td>'.  $rdv->date.'</td>';
     $rdvtab.='<td>'.  $rdv->plages.'</td>';
-    $rdvtab.='<td>'.  $rdv->conclusion.'</td>';
+    $rdvtab.='<td>'.  $rdv->nom.'</td>';
+    $rdvtab.='<td>'.  $rdv->prenom.'</td>';
+  //  $rdvtab.='<td>'.  $rdv->prochainrdv.'</td>';
     
     $rdvtab.='</tr></tbody>';
 
