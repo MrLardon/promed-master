@@ -11,23 +11,23 @@
     <div id="fond" class="row">
         <div class="col-md-3 border-right">
             <div id="clever" class="d-flex flex-column align-items-center text-center p-3 py-5">
-             <span></span>  <img class="rounded-circle mt-5" width="250px" src="https://s1.qwant.com/thumbr/0x380/b/8/7315afb14d1ec94005e80276cd51f78cd9596122a367820bde3789d95d9e6e/17g3re.jpg?u=https%3A%2F%2Fi.imgflip.com%2F17g3re.jpg&q=0&b=1&p=0&a=0"><span class="font-weight-bold">Praticient</span><span class="text-black-50">Spécialité :<input name="specialite"></span><span> </span></div>
+             <span></span>  <img class="rounded-circle mt-5" width="250px" src="https://s1.qwant.com/thumbr/0x380/b/8/7315afb14d1ec94005e80276cd51f78cd9596122a367820bde3789d95d9e6e/17g3re.jpg?u=https%3A%2F%2Fi.imgflip.com%2F17g3re.jpg&q=0&b=1&p=0&a=0"><span class="font-weight-bold">Praticien</span><span class="text-black-50">Spécialité <?= $specialite ?> </span><span> </span></div>
         </div>
         <div id="clever" class="col-md-5 border-right">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                <h4 class="text-right">Profil du Médecin</h4>
+                <h4 class="text-right">Profil du praticien</h4>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Nom</label><input type="text" class="form-control" placeholder="Nom" name="nom"></div>
-                    <div class="col-md-6"><label class="labels">Prénom</label><input type="text" class="form-control" placeholder="Prénom" name="prenom"></div>
-                    <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder="Email" name="mail"></div>
-                    <div class="col-md-12"><label class="labels">Numéro de téléphone</label><input type="text" class="form-control" placeholder="Numéro de téléphone" name="num_tel"></div>
-                    <div class="col-md-12"><label class="labels">Addresse</label><input type="text" class="form-control" placeholder="Addresse" name="rue"></div>
-                    <div class="col-md-12"><label class="labels">Numéro de rue</label><input type="text" class="form-control" placeholder="Numéro de rue" name="num_rue"></div>
-                    <div class="col-md-12"><label class="labels">Code Postal</label><input type="text" class="form-control" placeholder="Code Postal" name="code_postal"></div>
-                    <div class="col-md-12"><label class="labels">Ville</label><input type="text" class="form-control" placeholder="Ville" name="ville"></div> 
-                    <div class="col-md-12"><label class="labels">Numéro RPPS</label><input type="text" class="form-control" placeholder="Numéro RPPS" name="num_rpps"></div> 
+                    <div class="col-md-6"><label class="labels">Nom</label><input type="text" class="form-control" placeholder="<?= $nom ?>" name="nom"></div>
+                    <div class="col-md-6"><label class="labels">Prénom</label><input type="text" class="form-control" placeholder="<?= $prenom ?>" name="prenom"></div>
+                    <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder="<?= $mail ?>" name="mail"></div>
+                    <div class="col-md-12"><label class="labels">Numéro de téléphone</label><input type="text" class="form-control" placeholder="<?= $num_tel ?>" name="num_tel"></div>
+                    <div class="col-md-12"><label class="labels">Addresse</label><input type="text" class="form-control" placeholder="Addresse" name="<?= $rue ?>"></div>
+                    <div class="col-md-12"><label class="labels">Numéro de rue</label><input type="text" class="form-control" placeholder="<?= $num_rue ?>" name="num_rue"></div>
+                    <div class="col-md-12"><label class="labels">Code Postal</label><input type="text" class="form-control" placeholder="<?= $cp ?>" name="code_postal"></div>
+                    <div class="col-md-12"><label class="labels">Ville</label><input type="text" class="form-control" placeholder="<?= $ville ?>" name="ville"></div>
+                    <div class="col-md-12"><label class="labels">Numéro RPPS</label><input type="text" class="form-control" placeholder="<?= $num_rpps ?>" name="num_rpps"></div>
                 </div id="clever"> 
                 <div id="fond" class="row mt-3">
                      </div>

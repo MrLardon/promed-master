@@ -1,17 +1,17 @@
 <?php
 
-$query = getPdo()->prepare("SELECT * FROM patient WHERE id=2");
+$query = getPdo()->prepare("SELECT p.*, s.metier FROM praticien p join specialite s on p.id_specialite=s.id WHERE p.id=2");
 $query->execute();
 
 
 $profil = $query->Fetch(PDO::FETCH_OBJ);
     $nom = $profil->nom;
     $prenom = $profil->prenom;
-    $date_naissance = $profil->date_naissance;
+    $specialite = $profil->metier;
     $rue = $profil->rue;
     $mail = $profil->mail;
-    $tel = $profil->telephone;
-    $numsecu = $profil->num_secu;
+    $num_tel = $profil->num_tel;
+    $num_rpps = $profil->num_rpps;
     $num_rue = $profil->num_rue;
     $cp = $profil->code_postal;
     $ville = $profil->ville;
@@ -38,4 +38,4 @@ while($rdv = $queryrdv->Fetch(PDO::FETCH_OBJ)){
 }    
 
 
-include VUE_DIR . 'profilpatient.html';
+include VUE_DIR . 'profilpraticien.html';
