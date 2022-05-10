@@ -21,7 +21,7 @@ if (isset($_POST)){
         print_r("OUI");
         do{
             if ($p['praticien']){
-                header('Location: ?action=inscription');
+                header('Location: ?action=compte');
             }else{
 
             }
