@@ -1,7 +1,6 @@
 <?php
 include_once "bd.inc.php";
 include VUE_DIR."inscription.html";
-
 $sets =[
     $_POST["nom"],
     $_POST["prenom"],
