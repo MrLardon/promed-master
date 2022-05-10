@@ -18,12 +18,15 @@ if (isset($_POST)){
     $query = getPdo()->prepare("SELECT `id`, `email`, `password`, `praticien`, `id_patient`, `id_praticien` FROM `utilisateur` WHERE `email`=:mel AND `password`=:mdp");
     $query->execute([':mel'=>$_POST["mail"],':mdp'=>$_POST["password"]]);
     if($p = $query->fetch()){
+        session_start();
         print_r("OUI");
         do{
             if ($p['praticien']){
-                header('Location: ?action=compte');
+                header('Location: ?action=comptepro');
+                $_SESSION['user'] = 'praticien';
             }else{
-
+                header('Location: ?action=compte');
+                $_SESSION['user'] = 'patient';
             }
             print_r($p);
             print_r($p['email']);
