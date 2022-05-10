@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<?php session_start(); ?>
 <html>
 <head>
  <link rel="stylesheet" href="../assets/css/profilpatient.css">
@@ -37,8 +38,9 @@
             </div>
             
         </div>
-
-
+        <?php 
+        print_r($_SESSION); 
+        ?>
         </div>
     </div> 
 </div>

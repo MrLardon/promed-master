@@ -1,13 +1,12 @@
 <?php
 
+
 include_once "bd.utilisateur.inc.php";
 include VUE_DIR."connexion.html";
 
 $mailU = $_POST["mail"];
 $mdpU = $_POST["password"];
 print_r($mailU);
-
-//print_r($mdpU);
 
 $sets=[
     $_POST["mail"],
@@ -18,15 +17,22 @@ if (isset($_POST)){
     $query = getPdo()->prepare("SELECT `id`, `email`, `password`, `praticien`, `id_patient`, `id_praticien` FROM `utilisateur` WHERE `email`=:mel AND `password`=:mdp");
     $query->execute([':mel'=>$_POST["mail"],':mdp'=>$_POST["password"]]);
     if($p = $query->fetch()){
-        session_start();
         print_r("OUI");
+        session_start();
+        
+        $_SESSION['id']=$p['id'];
+        print_r($_SESSION);
+ 
+        // $_SESSION['log_session']=[
+        //     'id'=>$p->id,
+        //     'praticien'=>$p->praticien,
+        //     'time_session'=>time()
+        // ];
         do{
             if ($p['praticien']){
                 header('Location: ?action=comptepro');
-                $_SESSION['user'] = 'praticien';
             }else{
                 header('Location: ?action=compte');
-                $_SESSION['user'] = 'patient';
             }
             print_r($p);
             print_r($p['email']);

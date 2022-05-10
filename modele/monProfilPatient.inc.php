@@ -37,5 +37,4 @@ while($rdv = $queryrdv->Fetch(PDO::FETCH_OBJ)){
     //die($rdvtab);
 }    
 
-
 include VUE_DIR . 'profilpatient.html';

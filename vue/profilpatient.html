@@ -1,3 +1,4 @@
+<?php   session_start(); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -54,7 +55,9 @@
     <?= $rdvtab ?>   
 
   </table>
-
+  <?php 
+  print_r($_SESSION); 
+  ?>
         </div>
     </div> 
 </div>
