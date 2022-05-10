@@ -15,7 +15,11 @@ if (isset($_POST["mail"]) && isset($_POST["password"])) {
     $mailU = "";
     $mdpU = "";
 }
+<<<<<<< HEAD
 header('Location: ../../?action=compte');
+=======
+//header('Location: ../../?action=compte');
+>>>>>>> master
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
 
 
