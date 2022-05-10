@@ -20,7 +20,7 @@ if (isset($_POST)){
         print_r("OUI");
         do{
             if ($p['praticien']){
-                header('Location: http://projet.promed/?action=inscription');
+                header('Location: ?action=inscription');
             }else{
 
             }
