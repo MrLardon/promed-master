@@ -12,6 +12,11 @@ if (isset($_GET["action"])) {
     $action = "defaut";
 }
 
+if (isset($_GET["type"])) {
+    $type = $_GET["type"];
+} else {
+    $type = "defaut";
+}
 
 $fichier = controleurPrincipal($action);
 

@@ -21,6 +21,7 @@ if (isset($_POST)){
         session_start();
         
         $_SESSION['id']=$p['id'];
+        $_SESSION['praticien']=$p['praticien'];
         print_r($_SESSION);
  
         // $_SESSION['log_session']=[

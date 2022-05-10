@@ -5,8 +5,9 @@ function controleurPrincipal($action)
     //die (CONTROL_PRATICIEN."rdv_praticien.php");
     
     $lesActions = array();
-    $lesActions["defaut"] = CONTROL_DIR."connexion.php";
+    $lesActions["defaut"] = VUE_DIR."choixpatient_praticien.html";
     $lesActions["connexion"] = CONTROL_DIR."connexion.php";
+    $lesActions["connexionpro"] = CONTROL_DIR."connexionpro.php";
     $lesActions["newpresta"] = CONTROL_PRATICIEN."edit_prestation.php";
     $lesActions["inscription"] = CONTROL_PATIENT."edit_patient.php";
     $lesActions["comptepro"] = CONTROL_PRATICIEN."profilPro.php";
