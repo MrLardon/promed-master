@@ -1,6 +1,6 @@
 <?php
-
 $query = getPdo()->prepare("SELECT * FROM patient WHERE id=2");
+//$query->bindParam(':id',$_SESSION['id']);
 $query->execute();
 
 

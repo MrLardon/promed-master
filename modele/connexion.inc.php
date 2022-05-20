@@ -22,7 +22,7 @@ if (isset($_POST)){
         
         $_SESSION['id']=$p['id'];
         $_SESSION['praticien']=$p['praticien'];
-        print_r($_SESSION);
+        //print_r($_SESSION);
  
         // $_SESSION['log_session']=[
         //     'id'=>$p->id,
