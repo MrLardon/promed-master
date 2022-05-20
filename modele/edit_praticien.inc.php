@@ -1,6 +1,6 @@
 <?php
 include_once "bd.inc.php";
-include VUE_DIR."nouveauPraticien.html";
+include VUE_DIR."inscriptionPraticien.html";
 
 $spe = getPdo()->prepare("SELECT * FROM specialite");
 

@@ -53,12 +53,29 @@ if($type==0){
 
         </form>
 
-        <form method="get" action="controleur/inscription.php">
+        <!-- <form method="get" action="controleur/?inscription.php/?type=0">
+            <input type="hidden" value="$type">            
             <button type="submit">S'inscrire
                 <i class="zmdi zmdi-arrow-right"></i>
             </button>
-        </form>
+        </form> -->
+        <?php 
+        $role = filter_input(INPUT_GET, 'type');
+        $url = "";
+        if($role == '0') {
+            $url = "?action=inscription";
+        } else {
+            $url = "?action=inscriptionPro";
+        }
+        ?>
+            
+            <button type="submit"> <a id="zoneTest" href= <?= $url ?> style="text-decoration:none; color: white">S'inscrire</a>
+                <i class="zmdi zmdi-arrow-right"></i>
+            </button>
+
+        
     </div>
+
 
 
 

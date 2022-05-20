@@ -3,6 +3,7 @@
 
 include_once "bd.utilisateur.inc.php";
 include VUE_DIR."connexion.html";
+$_SESSION['type']=$type;
 
 $mailU = $_POST["mail"];
 $mdpU = $_POST["password"];
