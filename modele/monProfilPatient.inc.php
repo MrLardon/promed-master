@@ -1,7 +1,9 @@
 <?php
-$query = getPdo()->prepare("SELECT * FROM patient WHERE id=2");
-//$query->bindParam(':id',$_SESSION['id']);
-$query->execute();
+session_start();
+
+$query = getPdo()->prepare("SELECT * FROM patient WHERE id=:id");
+
+$query->execute([':id'=>$_SESSION['id']]);
 
 
 $profil = $query->Fetch(PDO::FETCH_OBJ);
@@ -18,8 +20,8 @@ $profil = $query->Fetch(PDO::FETCH_OBJ);
 
 
 
-$queryrdv = getPdo()->prepare("SELECT s.metier,pr.nom, date, conclusion,plages FROM rdv r INNER JOIN Plage p ON r.plage = p.id inner join praticien pr on pr.id=r.id_praticien INNER JOIN specialite s ON s.id=pr.id_specialite");
-$queryrdv->execute();
+$queryrdv = getPdo()->prepare("SELECT s.metier,pr.nom, date, conclusion,plages FROM rdv r INNER JOIN Plage p ON r.plage = p.id inner join praticien pr on pr.id=r.id_praticien INNER JOIN specialite s ON s.id=pr.id_specialite INNER JOIN utilisateur u on u.id_patient=r.id_patient WHERE u.id =:id");
+$queryrdv->execute([':id'=>$_SESSION['id']]);
 
 $rdvtab=null;
 
