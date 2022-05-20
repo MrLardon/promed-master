@@ -1,7 +1,10 @@
 <?php
+session_start();
 
-$query = getPdo()->prepare("SELECT p.*, s.metier FROM praticien p join specialite s on p.id_specialite=s.id WHERE p.id=2");
-$query->execute();
+
+
+$query = getPdo()->prepare("SELECT p.*, s.metier FROM praticien p join specialite s on p.id_specialite=s.id WHERE p.id=:id");
+$query->execute([':id'=>$_SESSION['id']]);
 
 
 $profil = $query->Fetch(PDO::FETCH_OBJ);
