@@ -21,8 +21,8 @@ $profil = $query->Fetch(PDO::FETCH_OBJ);
 
 
 
-$queryrdv = getPdo()->prepare("SELECT pa.nom, pa.prenom, pa.telephone, date, plages FROM rdv r INNER JOIN Plage p ON r.plage = p.id INNER JOIN praticien pr on pr.id=r.id_praticien INNER JOIN patient pa on pa.id=r.id_patient WHERE pr.id = 2 ");
-$queryrdv->execute();
+$queryrdv = getPdo()->prepare("SELECT pa.nom, pa.prenom, pa.telephone, date, plages FROM rdv r INNER JOIN Plage p ON r.plage = p.id INNER JOIN praticien pr on pr.id=r.id_praticien INNER JOIN patient pa on pa.id=r.id_patient INNER JOIN utilisateur u on u.id_praticien= r.id_praticien WHERE u.id = :id ");
+$queryrdv->execute([':id'=>$_SESSION['id']]);
 
 $rdvtab=null;
 
