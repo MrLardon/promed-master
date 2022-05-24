@@ -1,11 +1,11 @@
 <?php
-if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
-    $racine = "..";
-}
-include_once "$racine/modele/connexion.inc.php";
-include_once "$racine/modele/bd.utilisateur.inc.php";
-include_once "$racine/modele/bd.typecuisine.inc.php";
-include_once "$racine/modele/bd.resto.inc.php";
+// if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
+//     $racine = "..";
+// }
+// include_once "$racine/modele/connexion.inc.php";
+// include_once "$racine/modele/bd.utilisateur.inc.php";
+// include_once "$racine/modele/bd.typecuisine.inc.php";
+// include_once "$racine/modele/bd.resto.inc.php";
 
 // creation du menu burger
 $mediConcept = array();
