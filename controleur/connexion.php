@@ -15,19 +15,3 @@ if (isset($_POST["mail"]) && isset($_POST["password"])) {
     $mailU = "";
     $mdpU = "";
 }
-
-// appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
-
-
-// traitement si necessaire des donnees recuperees
-login($mailU, $mdpU);
-
-if (isLoggedOn()) { // si l'utilisateur est connecté on redirige vers le controleur monProfil
-   // include "../controleur/patient/monProfilPatient.php";
-} else { // l'utilisateur n'est pas connecté, on affiche le formulaire de connexion
-    // appel du script de vue 
-    $titre = "authentification";
-
-   // include VUE_DIR . "vueAuthentification.html.php";
-
-}

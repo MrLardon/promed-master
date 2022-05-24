@@ -1,7 +1,6 @@
 <?php
 include_once "bd.inc.php";
 include VUE_DIR."inscription.html";
-
 $sets =[
     $_POST["nom"],
     $_POST["prenom"],
@@ -25,8 +24,6 @@ if (isset($_POST)){
 
 $query = getPdo()->prepare("INSERT INTO patient (nom, prenom, rue, date_naissance, mail, telephone, num_secu, num_rue, code_postal, ville, password, nvx_client)  VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
 $query->execute($sets);
- foreach ($query as $row) {
-     print_r($row);
- }
+
 
 }

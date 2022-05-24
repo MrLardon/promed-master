@@ -16,7 +16,7 @@ include "pied.html";
 <body>
 
 
-<form action="" method="post"></form>
+<form action="" method="post">
 <div>
 
     <h2>Nouveau Praticien : </h2>
@@ -29,7 +29,15 @@ include "pied.html";
     <div class="form-control"><input type="text" name="prenom" placeholder="Prénom" required>Prénom</input>
         </div>
         <div class="form-control">
-            <input type="text" name="specialite" placeholder="Spécialité" required>Spécialité</input>
+            <select name="id_specialite" class="form-control" >
+                <option value="1" >Kiné</option>
+                <option value="2">Ostéo</option>
+                <option value="3">Acupuncteur</option>
+                <option value="4">Sophrologue</option>
+                <option value="5">Psychologue</option>
+                <option value="6">Orthophoniste</option>
+            </select>
+
         </div>
         <div class="form-control">
             <input type="int" name="num_rpps" placeholder="Numéro rpps" required>Numéro RPPS</input>
@@ -37,10 +45,13 @@ include "pied.html";
         <div class="form-control">
             <input type="mail" name="mail" placeholder="Email" required>Adresse mail</input>
         </div>
+        <div class="form-control">
+        <input type="text" name="num_tel" placeholder="Numéro de téléphone" required>Numéro de téléphone</input>
+    </div>
         <div>
             <input type="text" name="password" required placeholder="Mot de passe">Mot de passe</input>
         </div>
-    </div class="form-control">
+    </div>
     <div style="display: flex ; flex-direction: column  " class="form-control">
         <div class="form-control">
             <input type="text" name="ville" placeholder="Ville" required>Ville</input>
@@ -57,7 +68,7 @@ include "pied.html";
         <div>
             <select name="tele_consult">
                 <option type="checkbox" value="0">Non</option>
-            <option type="checkbox" value="1">Oui</option>
+                <option type="checkbox" value="1">Oui</option>
             </select>
         </div>
 
@@ -67,8 +78,6 @@ include "pied.html";
     </div>
 </div>
 </form>
-<?php
-var_dump($_POST);
-?>
+
 </body>
 </html>

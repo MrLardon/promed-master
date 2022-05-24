@@ -1,54 +1,87 @@
 <?php
 $titre = "Connexion";
+if($type==0){
+	$image="assets/img/registration-form-1.jpg";
+	$fond="assets/img/rea.jpg";
+	$user="Patient";
+}else{
+	$image="assets/img/docteur.jpg";
+	$fond="assets/img/blocop.png";
+	$user="Praticien";
+}
 ?>
+
 <!DOCTYPE html>
 <html>
-	
-	<head>
-		<meta charset="utf-8">
-		<title><?= $titre ?> à Promed</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<!--Une bibliothèque -->
-		<link rel="stylesheet" href="assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+<title> <?= $titre." ".$user ?> </title>
+<head>
+    <meta charset="utf-8">
 
-		<!-- CSS -->
-		<link rel="stylesheet" href="assets/css/style.css">
-	</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<body>
+    <!--Une bibliothèque -->
+    <link rel="stylesheet" href="assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 
-		<div class="wrapper" style="background-image: url('images/rea.jpg');">
-			<div class="inner">
-				<div class="image-holder">
-					<img src="assets/img/docteur.jpg" alt="">
-				</div>
-				<form action="" method="post">
-					<h3> <?= $titre ?> </h3>
-		
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-					<div class="form-wrapper">
-						<input type="text" placeholder="Email" class="form-control">
-						<i class="zmdi zmdi-email"></i>
-					</div>
+<body>
 
-					<div class="form-wrapper">
-						<input type="password" placeholder="Mot de passe" class="form-control">
-						<i class="zmdi zmdi-lock"></i>
-					</div>
-				
-					<button>Se connecter
-						<i class="zmdi zmdi-arrow-right"></i>
-					</button>
-					<button>S'inscrire
-						<i class="zmdi zmdi-arrow-right"></i>
+<div class="wrapper" style="background-image: url('<?= $fond ?>');">
+    <div class="inner">
+        <div class="image-holder">
+            <img src=<?= $image ?> alt="">
+        </div>
+        <form action="" method="post">
 
-					</button>
-				</form>
-				
-		
-			</div>
-		</div>
-		
-	</body>
+			<h3> <?= $titre." ".$user ?> </h3>
+
+            <div class="form-wrapper">
+                <input name="mail" type="text" placeholder="Email" class="form-control">
+                <i class="zmdi zmdi-email"></i>
+            </div>
+
+            <div class="form-wrapper">
+                <input name="password" type="password" placeholder="Mot de passe" class="form-control">
+                <i class="zmdi zmdi-lock"></i>
+            </div>
+            <div>
+                <button>Se connecter
+                    <i class="zmdi zmdi-arrow-right"></i>
+                </button>
+
+        </form>
+
+        <!-- <form method="get" action="controleur/?inscription.php/?type=0">
+            <input type="hidden" value="$type">            
+            <button type="submit">S'inscrire
+                <i class="zmdi zmdi-arrow-right"></i>
+            </button>
+        </form> -->
+        <?php 
+        $role = filter_input(INPUT_GET, 'type');
+        $url = "";
+        if($role == '0') {
+            $url = "?action=inscription";
+        } else {
+            $url = "?action=inscriptionPro";
+        }
+        ?>
+            
+            <button type="submit"> <a id="zoneTest" href= <?= $url ?> style="text-decoration:none; color: white">S'inscrire</a>
+                <i class="zmdi zmdi-arrow-right"></i>
+            </button>
+
+        
+    </div>
+
+
+
+
+</div>
+
+</div>
+
+</body>
 </html>
